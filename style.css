@@ -1,119 +1,45 @@
-/* ✅ Reset & Base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Comic Sans MS', cursive;
-}
-
 body {
-  background: #ffe4c4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-/* 🔲 Shared Screen Styling */
-.screen {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #fff;
   text-align: center;
 }
 
-.hidden {
-  display: none;
+#gamesList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
 }
 
-h1, h2 {
-  margin-bottom: 20px;
-  color: #3b2f2f;
+.game-card {
+  width: 200px;
+  background: #222;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 10px;
+  transition: transform 0.2s ease;
 }
 
-/* 🎮 Menu Buttons */
-button {
-  padding: 12px 24px;
-  margin: 10px;
-  font-size: 18px;
+.game-card:hover {
+  transform: scale(1.05);
+}
+
+.game-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.game-card h3 {
+  margin: 10px 0;
+}
+
+.game-card button {
+  padding: 8px 16px;
   border: none;
-  background-color: #8bc34a;
+  background: #00c853;
   color: white;
-  border-radius: 10px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background-color: #689f38;
-}
-
-/* 🧠 HUD */
-.hud {
-  display: flex;
-  justify-content: space-between;
-  width: 80%;
-  margin: 20px auto;
-  font-size: 20px;
-  color: #333;
-  font-weight: bold;
-}
-
-/* 🎴 Card Grid */
-.card-grid {
-  display: grid;
-  gap: 10px;
-  justify-content: center;
-  align-content: center;
-  margin: 10px;
-}
-
-/* 🃏 Card Styling */
-.card {
-  width: 80px;
-  height: 80px;
-  background-color: #ffffff;
-  border: 2px solid #333;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 36px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-  user-select: none;
-}
-
-.card.matched {
-  visibility: hidden;
-  pointer-events: none;
-}
-
-.card.flipped {
-  background-color: #ffd54f;
-}
-
-/* 💀 Game Over */
-#gameOverScreen h2 {
-  color: #d32f2f;
-  margin-bottom: 10px;
-}
-
-#gameOverScreen p {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-/* 📱 Responsive */
-@media (max-width: 768px) {
-  .card {
-    width: 60px;
-    height: 60px;
-    font-size: 28px;
-  }
-
-  .hud {
-    flex-direction: column;
-    align-items: center;
-  }
 }
