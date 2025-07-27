@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>🐾 Memory Match - Animal Cards</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 🎮 Main Menu -->
+  <div id="menuScreen" class="screen">
+    <h1>🐾 Animal Memory Match</h1>
+    <p>Select Difficulty:</p>
+    <button onclick="startGame('easy')">Easy (4x2)</button>
+    <button onclick="startGame('medium')">Medium (4x5)</button>
+    <button onclick="startGame('hard')">Hard (4x7)</button>
+  </div>
+
+  <!-- 🕹️ Game Screen -->
+  <div id="gameScreen" class="screen hidden">
+    <div class="hud">
+      <div>⏱️ Time: <span id="timer">150</span>s</div>
+      <div>🎯 Score: <span id="score">0</span></div>
+      <div>🏆 Best: <span id="bestScore">0</span></div>
+    </div>
+    <div id="cardGrid" class="card-grid"></div>
+  </div>
+
+  <!-- 🔁 Game Over Screen -->
+  <div id="gameOverScreen" class="screen hidden">
+    <h2>⏱️ Time's Up!</h2>
+    <p>Final Score: <span id="finalScore"></span></p>
+    <p>🎉 Best Score: <span id="finalBestScore"></span></p>
+    <button onclick="goToMenu()">Back to Menu</button>
+    <button onclick="restartGame()">Restart</button>
+  </div>
+
+  <!-- 🔊 Audio Elements -->
+  <audio id="popSound" src="pop.mp3" preload="auto"></audio>
+  <audio id="bgMusic" src="jungle.mp3" preload="auto" loop></audio>
+
+  <!-- 💻 Script -->
+  <script src="script.js"></script>
+</body>
+</html>

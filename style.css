@@ -1,0 +1,119 @@
+/* ✅ Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+body {
+  background: #ffe4c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* 🔲 Shared Screen Styling */
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+  color: #3b2f2f;
+}
+
+/* 🎮 Menu Buttons */
+button {
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 18px;
+  border: none;
+  background-color: #8bc34a;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #689f38;
+}
+
+/* 🧠 HUD */
+.hud {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 20px auto;
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+/* 🎴 Card Grid */
+.card-grid {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  align-content: center;
+  margin: 10px;
+}
+
+/* 🃏 Card Styling */
+.card {
+  width: 80px;
+  height: 80px;
+  background-color: #ffffff;
+  border: 2px solid #333;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  user-select: none;
+}
+
+.card.matched {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.card.flipped {
+  background-color: #ffd54f;
+}
+
+/* 💀 Game Over */
+#gameOverScreen h2 {
+  color: #d32f2f;
+  margin-bottom: 10px;
+}
+
+#gameOverScreen p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .card {
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+  }
+
+  .hud {
+    flex-direction: column;
+    align-items: center;
+  }
+}
